@@ -1,38 +1,37 @@
-/* ==========================
-   My Portfolio CSS
-   ========================== */
-
-/* 1. Colors I use all over the site */
 :root {
-  --blue1: #f0e6ff;   /* light gradient start for background */
-  --blue2: #c084fc;   /* gradient end */
-  --blue3: #7c3aed;   /* main highlight color */
-  --white: #fff;      /* white background for cards etc */
-  --text: #1e1b4b;    /* default text color */
+  /* Main color palette for background, highlights, and text */
+  --blue1: #f0e6ff;
+  --blue2: #c084fc;
+  --blue3: #7c3aed;
+  --white: #fff;
+  --text: #1e1b4b; /* default text color */
 }
 
-/* 2. Reset and font so everything looks clean */
+/* ========================== */
+/* RESET / GLOBAL STYLES      */
+/* ========================== */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* includes padding in width */
-  font-family: 'Poppins', sans-serif; /* nice modern font */
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* 3. Body background and text */
 body {
-  background: linear-gradient(to bottom, var(--blue1), var(--blue2)); /* nice gradient for the page */
-  color: var(--text); /* normal text color */
+  background: linear-gradient(to bottom, var(--blue1), var(--blue2));
+  color: var(--text);
 }
 
-/* 4. Header and navigation */
+/* ========================== */
+/* HEADER / NAVIGATION        */
+/* ========================== */
 .site-header {
-  background: rgba(255, 255, 255, 0.85); /* slightly see-through */
-  backdrop-filter: blur(10px); /* makes it blurry behind */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* small shadow so header pops */
-  position: sticky; /* stays on top when scrolling */
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
   top: 0;
-  z-index: 1000; /* makes sure it’s above everything */
+  z-index: 1000;
 }
 
 .site-header .container {
@@ -47,7 +46,7 @@ body {
 .brand {
   font-weight: 700;
   font-size: 22px;
-  color: var(--blue3); /* brand name color */
+  color: var(--blue3);
 }
 
 .main-nav a {
@@ -55,14 +54,14 @@ body {
   text-decoration: none;
   color: var(--text);
   font-weight: 600;
-  transition: 0.3s; /* smooth hover effect */
+  transition: 0.3s;
 }
 
 .main-nav a:hover {
-  color: var(--blue3); /* highlight when hovering */
+  color: var(--blue3);
 }
 
-/* shows which page is active */
+/* Active link underline based on target section */
 #home:target ~ .site-header .main-nav a[href="#home"],
 #about:target ~ .site-header .main-nav a[href="#about"],
 #education:target ~ .site-header .main-nav a[href="#education"],
@@ -70,17 +69,19 @@ body {
 #projects:target ~ .site-header .main-nav a[href="#projects"],
 #contact:target ~ .site-header .main-nav a[href="#contact"] {
   color: var(--blue3);
-  border-bottom: 2px solid var(--blue3); /* underline active page */
+  border-bottom: 2px solid var(--blue3);
 }
 
-/* 5. Home section styles */
+/* ========================== */
+/* HOME SECTION                */
+/* ========================== */
 .home-banner {
   display: flex;
   max-width: 1200px;
   margin: 50px auto;
-  background: var(--white); /* card style background */
+  background: var(--white);
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* soft shadow */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   overflow: hidden;
   height: 450px;
   position: relative;
@@ -93,7 +94,7 @@ body {
   bottom: -50px;
   width: 400px;
   height: 400px;
-  background: #d1b3ff; /* just a purple circle decoration */
+  background: #d1b3ff;
   border-radius: 50%;
   z-index: 0;
 }
@@ -113,7 +114,7 @@ body {
   width: 100%;
   height: auto;
   max-height: 320px;
-  object-fit: cover; /* make image fit nicely */
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
@@ -148,21 +149,23 @@ body {
 }
 
 .highlight {
-  color: var(--blue3); /* for name or special words */
+  color: var(--blue3);
 }
 
-/* 6. All page sections hidden by default */
+/* ========================== */
+/* PAGE SECTIONS               */
+/* ========================== */
 .page {
-  display: none; /* hide pages by default */
+  display: none;
   padding: 80px 20px;
 }
 
 .page:target {
-  display: block; /* show page when clicked */
+  display: block;
 }
 
 body:not(:has(:target)) #home {
-  display: block; /* default home page */
+  display: block;
 }
 
 h2 {
@@ -170,13 +173,15 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* 7. About section */
+/* ========================== */
+/* ABOUT SECTION               */
+/* ========================== */
 .about-container {
   display: flex;
   align-items: center;
   gap: 30px;
   padding: 20px;
-  flex-wrap: wrap; /* wrap on smaller screens */
+  flex-wrap: wrap;
 }
 
 .about-container .about-photo {
@@ -192,56 +197,60 @@ h2 {
   color: var(--text);
 }
 
-/* 8. Education section grid */
+/* ========================== */
+/* EDUCATION SECTION           */
+/* ========================== */
 .edu-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* responsive cards */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   justify-items: center;
 }
 
-/* 9. Education card styling */
 .edu-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 8px;
-  padding: 15px;
-  width: 180px;
+  padding: 20px;
+  width: 100%;
+  max-width: 320px;
   background: var(--white);
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s; /* lift on hover */
+  transition: transform 0.3s;
 }
 
 .edu-item img {
   width: 140px;
   height: 140px;
-  border-radius: 50%; /* circle image */
+  border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .edu-item h3 {
   margin: 5px 0 3px 0;
   color: var(--blue3);
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .edu-item p {
-  font-size: 0.9rem;
-  line-height: 1.3;
+  font-size: 0.95rem;
+  line-height: 1.4;
   margin: 0;
   padding: 0 5px;
 }
 
 .edu-item:hover {
-  transform: translateY(-5px); /* small lift effect */
+  transform: translateY(-5px);
 }
 
-/* 10. Skills and Projects grids */
+/* ========================== */
+/* SKILLS SECTION              */
+/* ========================== */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -249,13 +258,18 @@ h2 {
   text-align: center;
 }
 
+/* ========================== */
+/* PROJECTS SECTION            */
+/* ========================== */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-/* 11. Generic cards for skills/projects */
+/* ========================== */
+/* CARD STYLING                */
+/* ========================== */
 .card {
   background: var(--white);
   border-radius: 12px;
@@ -265,10 +279,12 @@ h2 {
 }
 
 .card:hover {
-  transform: translateY(-5px); /* small hover effect */
+  transform: translateY(-5px);
 }
 
-/* 12. Contact section */
+/* ========================== */
+/* CONTACT SECTION             */
+/* ========================== */
 #contact {
   text-align: center;
 }
@@ -278,7 +294,9 @@ h2 {
   font-weight: bold;
 }
 
-/* 13. Footer */
+/* ========================== */
+/* FOOTER                      */
+/* ========================== */
 .site-footer {
   text-align: center;
   padding: 20px;
@@ -287,126 +305,101 @@ h2 {
   border-top: 1px solid #ddd;
 }
 
-/* 14. Responsive adjustments */
-/* Screens below 900px */
+/* ========================== */
+/* DARK MODE                   */
+/* ========================== */
+.dark-mode {
+  background: #1e1e2f;
+  color: #f5f5f5;
+}
+
+.dark-mode .card,
+.dark-mode .home-banner,
+.dark-mode .about-container {
+  background: #2c2c44;
+  color: #f5f5f5;
+}
+
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode h3, 
+.dark-mode p {
+  color: #f5f5f5;
+}
+
+.dark-mode a {
+  color: #ffcc66;
+}
+
+/* ========================== */
+/* RESPONSIVE MEDIA QUERIES    */
+/* ========================== */
 @media (max-width: 900px) {
+  /* HOME SECTION - adjust for phone like Lab 2 */
   .home-banner {
-    flex-direction: row; /* keep horizontal layout */
-    height: auto; /* allow natural height */
-    padding: 20px;
+    flex-direction: column;
+    height: auto;
   }
 
   .home-left, .home-center {
-    width: 50%; /* split horizontally */
-    text-align: left;
-    padding: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 20px 10px;
   }
 
   .home-small-top {
-    position: absolute; /* float small photo at top corner */
-    top: 10px;
-    right: 10px;
-    margin: 0;
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 10px auto;
   }
 
-  /* Education grid horizontal layout */
-  .edu-list {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-    justify-items: start; /* align cards from left to right */
+  /* Education, Skills, Projects */
+  .edu-list, .skills-grid, .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* keep horizontal cards */
   }
 }
 
-/* Screens below 600px */
 @media (max-width: 600px) {
+  /* HOME SECTION - keep Lab 2 look */
+  .photo-circle {
+    width: 300px;
+    height: 300px;
+    left: -60px;
+    bottom: -40px;
+  }
+
   .home-large-photo {
     max-width: 90%;
-    max-height: 280px; /* prevent shrinking too much */
+    max-height: 250px;
     object-fit: cover;
-    border-radius: 10px;
+    margin-bottom: 15px;
   }
 
   .home-center h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .home-center p {
     font-size: 1rem;
   }
 
-  /* Keep education cards horizontal even on small screens */
+  .home-small-top .small-photo {
+    width: 90px;
+    height: 90px;
+  }
+
+  /* About section */
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-container .about-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  /* Keep education horizontal */
   .edu-list {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit)
   }
-
-  /* Reduce purple circle size */
-  .photo-circle {
-    width: 200px;
-    height: 200px;
-    left: -50px;
-    bottom: -25px;
-  }
-}
-
-/* Screens below 400px */
-@media (max-width: 400px) {
-  .home-large-photo {
-    max-height: 220px;
-  }
-
-  .home-center h1 {
-    font-size: 1.6rem;
-  }
-
-  .home-center p {
-    font-size: 0.95rem;
-  }
-
-  .photo-circle {
-    width: 150px;
-    height: 150px;
-    left: -40px;
-    bottom: -20px;
-  }
-}
-
-/* 15. Dark mode */
-.dark-mode {
-  background: #1e1e2f; /* overall dark background */
-  color: #f5f5f5;      /* default light text */
-}
-
-/* Cards, banners, and section containers in dark mode */
-.dark-mode .card,
-.dark-mode .home-banner,
-.dark-mode .about-container {
-  background: #2c2c44;  /* slightly lighter dark for cards */
-  color: #f5f5f5;       /* ensure text inside is visible */
-}
-
-/* Text elements in dark mode */
-.dark-mode h1, 
-.dark-mode h2, 
-.dark-mode h3, 
-.dark-mode p {
-  color: #f5f5f5; /* light text for headings and paragraphs */
-}
-
-/* About section text fix */
-.dark-mode .about-container .about-text {
-  color: #f5f5f5; /* override previous dark text so it’s visible */
-}
-
-/* Links in dark mode */
-.dark-mode a {
-  color: #ffcc66; /* visible and warm link color */
-  text-decoration: none;
-}
-
-/* Footer in dark mode */
-.dark-mode .site-footer {
-  background: #2c2c44; /* match container cards */
-  color: #f5f5f5;
-  border-top: 1px solid #444; /* subtle border */
-}
