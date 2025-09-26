@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pema Yangki — Portfolio</title>
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="site-header">
+    <div class="container">
+      <!-- Brand / Portfolio Name -->
+      <div class="brand">✨Kiyaang’s Portfolio🌸💻</div>
+      <!-- Navigation links for different sections -->
+      <nav class="main-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGES CONTAINER: Holds all sections of the portfolio -->
+  <div class="pages-container">
+    
+    <!-- HOME SECTION -->
+    <section id="home" class="page">
+      <div class="home-banner">
+        <!-- Left side: Main large photo -->
+        <div class="home-left">
+          <div class="photo-circle"></div> <!-- decorative circle -->
+          <img src="images/s2.jpg" alt="Large photo" class="home-large-photo">
+        </div>
+        <!-- Center text -->
+        <div class="home-center">
+          <h1>Hi! I am <span class="highlight">Pema Yangki</span></h1>
+          <p>I’m from Samtse, Gawadong, a place fondly known as Alleypakha.  
+             Thank you for stopping by—hope you enjoy exploring my page! ✨
+          </p>
+          <!-- Greeting message added dynamically by JS -->
+        </div>
+        <!-- Small top photo -->
+        <div class="home-small-top">
+          <img src="images/p1.jpg" alt="Small photo" class="small-photo">
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="page">
+      <div class="about-container">
+        <img src="images/s.webp" alt="Pema full body photo" class="about-photo">
+        <div class="about-text">
+          <h2>About me</h2>
+          <p>Hi — I’m <strong>Pema (Kiyaang)</strong>, but you can call me Kiyaang—a nickname I adore. 
+             When I’m not busy with studies, I enjoy online games like PUBG and ML. 
+             I also love novels and cooking local and international fast food. 
+             Thanks for stopping by—hope you enjoy exploring my page! ✨</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="page">
+      <div class="container">
+        <h2>A quick glance at my academic journey.</h2>
+        <!-- Education cards -->
+        <div class="edu-list">
+          <div class="edu-item card">
+            <img src="images/e3.jpg" alt="Samtse Lower Secondary">
+            <h3>PP–4</h3>
+            <p>Samtse Lower Secondary School — foundation in basics and community learning.</p>
+          </div>
+          <div class="edu-item card">
+            <img src="images/e1.jpg" alt="Tencholing Primary">
+            <h3>5–6</h3>
+            <p>Tencholing Primary School, Wangdue.</p>
+          </div>
+          <div class="edu-item card">
+            <img src="images/e3.jpg" alt="Samtse Lower Secondary">
+            <h3>7–8</h3>
+            <p>Samtse Lower Secondary School — further studies & activities.</p>
+          </div>
+          <div class="edu-item card">
+            <img src="images/e2.jpg" alt="Samtse Higher Secondary">
+            <h3>9–12</h3>
+            <p>Samtse Higher Secondary School — prepared for college.</p>
+          </div>
+          <div class="edu-item card">
+            <img src="images/e4.png" alt="Samtse College of Education">
+            <h3>College</h3>
+            <p>Samtse College of Education (B.Ed. IT) — web, databases & teaching methods.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="page">
+      <div class="container">
+        <h2>Not highly skilled yet, but you can rely on me for sure.</h2>
+        <div class="skills-grid">
+          <!-- Each skill is a card -->
+          <div class="skill-card card">
+            <h3>🧠 Creativity</h3>
+            <p>Ability to generate fresh, original ideas and find innovative solutions.</p>
+          </div>
+          <div class="skill-card card">
+            <h3>⏱️ Responsibility</h3>
+            <p>Being reliable, accountable, and completing tasks efficiently.</p>
+          </div>
+          <div class="skill-card card">
+            <h3>🤝 Interpersonal Skills</h3>
+            <p>Ability to communicate, collaborate, and build positive relationships.</p>
+          </div>
+          <div class="skill-card card">
+            <h3>📚 Learning Agility</h3>
+            <p>Quick to understand new concepts, adapt, and apply knowledge effectively.</p>
+          </div>
+          <div class="skill-card card">
+            <h3>🐍 Python</h3>
+            <p>I’m a little good at Python — can write simple programs and solve basic problems.</p>
+          </div>
+          <div class="skill-card card">
+            <h3>🎬 Video & Infographics</h3>
+            <p>Can create videos and infographics using Adobe Photoshop and Canva.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="page">
+      <div class="container">
+        <h2>The projects I have completed while being in college.</h2>
+        <!-- Projects cards -->
+        <div class="projects-grid">
+          <div class="project-card card">
+            <h3>🗃️ Library Management System</h3>
+            <p>UML diagrams & DBMS for books and members.</p>
+          </div>
+          <div class="project-card card">
+            <h3>💰 Bank Database</h3>
+            <p>Customers & transactions DB with SQL joins.</p>
+          </div>
+          <div class="project-card card">
+            <h3>🏋️ Gym Management Website</h3>
+            <p>Group project to manage trainers & members.</p>
+          </div>
+          <!-- Extra project will be added dynamically with JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="page">
+      <div class="container card">
+        <h2>You can contact me through the following.</h2>
+        <p>📧 <a href="mailto:pyangki99@gmail.com">pyangki99@gmail.com</a></p>
+        <p><a href="https://instagram.com/pemafy" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></p>
+        <p>👍 <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a></p>
+      </div>
+    </section>
+    
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Pema Yangki </p>
+      <!-- Dark Mode / Night Mode Button -->
+      <button id="moonlightToggle">🌙 Moonlight Mode</button>
+    </div>
+  </footer>
+
+  <!-- Link to JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
